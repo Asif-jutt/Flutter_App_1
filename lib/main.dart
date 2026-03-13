@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
-import 'homepractice.dart';
+import 'pages/home_page.dart';
+import 'pages/homepractice.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Flutter demo app", home: const Homepractic());
+    return MaterialApp(title: "Flutter App", 
+    themeMode: ThemeMode.dark,
+    theme: ThemeData(primarySwatch: Colors.purple),
+    darkTheme: ThemeData(brightness: Brightness.dark),
+    initialRoute: "/home",
+    routes: {
+      "/home":(context)=>Homepractic(),
+      "/":(context)=>HomePage(),
+    },
+    );
   }
 }
