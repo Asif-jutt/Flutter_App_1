@@ -10,9 +10,16 @@ class ObscuredTextFieldSample extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "Login Form",
-              style: TextStyle(color: Colors.blue, fontSize: 20),
+            SizedBox(
+              height: 100,
+              child: Text(
+                "Login Form",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 30,
+                  decoration: TextDecoration.underline,
+                ),
+              ),
             ),
             SizedBox(
               width: 300,
@@ -35,6 +42,8 @@ class ObscuredTextFieldSample extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20),
+            ElevatedButton(onPressed: () {}, child: Text("Login")),
           ],
         ),
       ),

@@ -23,13 +23,14 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/log",
+      initialRoute: "/",
       routes: {
         "/home": (context) => Homepractic(),
         "/": (context) => HomePage(),
         "/login": (context) => LoginPage(),
         "/log": (context) => ObscuredTextFieldSample(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
