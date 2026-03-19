@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
-
+import '../screens/drawer.dart';
+import '../screens/bottom_navigation.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
@@ -40,35 +41,8 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text("This is the home page", style: TextStyle(fontSize: 15)),
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(child: Text("Menu")),
-            ListTile(
-              title: Text(
-                "Home",
-                style: TextStyle(color: Colors.lightBlueAccent),
-              ),
-            ),
-            ListTile(
-              title: Text("About", style: TextStyle(color: Colors.blue)),
-            ),
-            ListTile(
-              title: Text("Contact", style: TextStyle(color: Colors.blue)),
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Setting"),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: "Notification",
-          ),
-        ],
-      ),
+      drawer: AppDrawer(),
+      bottomNavigationBar: BottomNavigation(),
     );
   }
 }
